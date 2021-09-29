@@ -275,14 +275,14 @@ function! vem_tabline#buffers#section.get_tabline() abort
     let section = '%#VemTablineNormal#'
 
     " left arrow
-    if self.left_arrow
-        let section .= g:vem_tabline_left_arrow
+    " if self.left_arrow
+    "     let section .= g:vem_tabline_left_arrow
 
-        " left padding
-        if self.left_padding
-            let section .= '%#VemTablinePartialName#' . self.get_left_padding() . '%#VemTablineNormal#'
-        endif
-    endif
+    "     " left padding
+    "     if self.left_padding
+    "         let section .= '%#VemTablinePartialName#' . self.get_left_padding() . '%#VemTablineNormal#'
+    "     endif
+    " endif
 
     " buffers
     let buffer_range = range(self.start_index, self.end_index)
@@ -309,14 +309,14 @@ function! vem_tabline#buffers#section.get_tabline() abort
     endfor
 
     " right arrow
-    if self.right_arrow
-        " right padding
-        if self.right_padding
-            let section .= '%#VemTablinePartialName#' . self.get_right_padding() . '%#VemTablineNormal#'
-        endif
+    " if self.right_arrow
+    "     " right padding
+    "     if self.right_padding
+    "         let section .= '%#VemTablinePartialName#' . self.get_right_padding() . '%#VemTablineNormal#'
+    "     endif
 
-        let section .= g:vem_tabline_right_arrow
-    endif
+    "     let section .= g:vem_tabline_right_arrow
+    " endif
 
     return section
 
