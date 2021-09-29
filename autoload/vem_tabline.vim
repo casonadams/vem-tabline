@@ -86,8 +86,8 @@ function! vem_tabline#tabline.update(...) abort
     " list of buffers to display and extra buffers (non-displayed ones)
     if self.multiwindow_mode
         let self.tabline_buffers = self.tabpage_buffers
-        " let self.extra_buffer_count = len(listed_buffers) - len(self.tabpage_buffers)
-        let self.extra_buffer_count = 0
+        let self.extra_buffer_count = len(listed_buffers) - len(self.tabpage_buffers)
+        " let self.extra_buffer_count = 0
     else
         let self.tabline_buffers = s:sort_buffers_in_tabpage(listed_buffers)
         let self.extra_buffer_count = 0
